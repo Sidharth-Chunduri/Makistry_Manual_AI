@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "concrete-spider-473120-f8",
+  "private_key_id": "c0c97d6174397bb988ddc9affae156c9ded1d920",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCgy88xRWDOFrN7\nTZROf/w15gE39Pg//seSoECQmmBl4/LyWWhY1eiGzAx/psGhlareeCvUocmZdF7Q\nwcDB5M+yBGS97/HFitYZWdPa6CHvvi7VNBp+wJRPdPdN1YQQT+dbfaNJLUF9U/YC\npOcq3hY0AigTxPR3JTjs8bqbkhhQEtX+4f1q5warya6PyEffHqFq+gn3pZCQUr/s\naOM20wIjwOMTgHc7eUWHCHV1hGpbNFWqdai+w3JdDQj/ge9ezApFIL9M8FpX+4Fk\nYBoY+M4M0TmWBEVZz3rl0IcojRD2tjfZG6QtsPW1s2r8kKMclcueeOvwF3AMfZFX\nquWaIykNAgMBAAECggEACf6RCs12pmin0EayrKxs10bMFZfO5F9oNTdru/E0g7DG\n9YRUJY1qLhK5xidtyqbcX4aVptpFhxnCGPSqEAMyW6zFPD8RRoeKJjo8nlMmZNnr\n3EmoSe+baFLrWjWmx0LILRoij5ZWBz20QVbRnYr/U009A3mO/mbcYnHl+Ox8QWHJ\nG4dpwfVwC0bLdXBBNv5E9U59yRytxQu788yCU+LG7net+zSvBKnDQTyrH5nRj9M9\nNCw1vbyOUntwQO4yo5vnMYGkx2zVYZ+en5HL2PLs0yuk4M4AmcLEgjEcXLbeEStF\nj8ce0o/LmI8XEh9DPwrQ3g+rRq0ECsUbb7ulODXoawKBgQDQC8EETDDzVj63TE2G\nrvJc5wQqdzoZ3z8lPA9KpGpCCXT05n+fI7rHTjCPGscZIHaXr/Ga2pmya8RNitEp\nhEqYNV+jhuz53PNU/aabk6zTlYVQDfC3MsKvPmYUFcb1X+rTmNuad3e4dYWwDYLI\n01HvXYOQdh4r35ns9iTxtHdYAwKBgQDF2/gTBS8NacoEKeNZ0tlImHuJ/oVdAVxx\nJWbRI6NNXQf/dyZ5bRH88w7+D8TRLFy1D2LIe2mw64x++bylcAMDbZ+4QPZ5bs74\nAgUqQuI5XjkmXnLtyVMaNonOTd2IBrNWvHPI4CJKdRUmSqFLu+waSim3tik8JQYx\nqsOjZsdVrwKBgDESNKqw1fLvaseNRdP4u83R55ekm52ynJBJxEmU0kNVO7LwEzYU\nFWAhPy7h4Ag7Mf3BUDl4SjxdUuX/Uip6u6V/IVnO32JoDTUExyF3CZK2d8VUJGzx\nmh3/l9Aw+saxow/ZxCKA/0oQ3kGSTkDUJ0VQR1Hxqlgq24Ga5UfliyjFAoGAC+wW\nRachT7CZMKkJfwcaeqpdf1Ir3Q/Q7yxuxplcJLQ/YCBg3B47YD+RHrP6ixQePfbA\nYA43ryZyX9BSkrFuLQ20+xhHAcgwhncwsnw3P3ey/+HfEP75l/HDWgANIj4tHkPa\nwjbnOg9WB+mlUHfxYSAo5V3/nBUrC2EbysPNrRcCgYEAxwfy5nUwOfP4mQNasyBr\nSFYN0bFezBgfd1ciCkhOs6He29ATEaBMDwK1rIk9zjem8ZeVOna1UhEV4W453NJ9\nmcb4XP6Kfms2WOSbGn+LOYvKL9pwpucBugy59UBjDaTyycF5bqLyP/NITB11UH4s\nSrD/86U3NdFkCfCCBeHD7rY=\n-----END PRIVATE KEY-----\n",
+  "client_email": "makistry-sid-dev@concrete-spider-473120-f8.iam.gserviceaccount.com",
+  "client_id": "115976013683237562442",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/makistry-sid-dev%40concrete-spider-473120-f8.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Makistry Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 195 100% 6%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 195 100% 6%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 195 100% 6%;
+
+    /* Primary: Deep Navy #031926 */
+    --primary: 195 100% 6%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Light Blue Background #D6F3FF */
+    --primary-light: 191 100% 91%;
+    
+    /* Medium Blue #184777 */
+    --primary-medium: 208 76% 28%;
+    
+    /* Call to Action Orange #FFCA85 */
+    --cta: 37 100% 76%;
+    --cta-foreground: 195 100% 6%;
+
+    --secondary: 191 100% 91%;
+    --secondary-foreground: 195 100% 6%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 191 100% 91%;
+    --accent-foreground: 195 100% 6%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 195 100% 6%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* --- Custom busy cursor using a spinning logo --- */
+@keyframes mk-spin { to { transform: rotate(360deg); } }
+
+/* Hide the native cursor only while our custom logo is showing */
+html.cursor-logo,
+html.cursor-logo * {
+  cursor: none !important;
+}
+
+/* Floating element that follows the pointer */
+.mk-cursor {
+  position: fixed;
+  z-index: 2147483647; /* on top of everything */
+  pointer-events: none; /* never blocks clicks */
+  width: 28px;          /* tweak size if you want */
+  height: 28px;
+  transform: translate(-50%, -50%); /* center on pointer */
+  will-change: transform;
+}
+
+/* The logo itself spins; use currentColor so it picks up theme if SVG allows */
+.mk-cursor__icon {
+  width: 100%;
+  height: 100%;
+  animation: mk-spin 0.9s linear infinite;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.25));
+  color: hsl(var(--primary)); /* if your SVG uses currentColor */
+}
+
+/* Keep your existing system fallback (optional) */
+html.cursor-progress,
+html.cursor-progress * { cursor: progress !important; }

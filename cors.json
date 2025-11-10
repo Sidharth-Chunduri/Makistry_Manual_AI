@@ -1,0 +1,25 @@
+[
+  {
+    "origin": [
+      "https://makistry.ai",
+      "https://www.makistry.ai",
+      "https://indigo-night-463419-r0.web.app",
+      "https://indigo-night-463419-r0.firebaseapp.com",
+      "http://localhost:5173",
+      "http://localhost:8080",
+      "http://localhost:3000"
+    ],
+    "method": ["GET", "HEAD", "OPTIONS"],
+    "responseHeader": [
+      "Content-Type",
+      "Content-Length",
+      "Content-Range",
+      "Accept-Ranges",
+      "Last-Modified",
+      "ETag",
+      "x-goog-hash",
+      "x-goog-stored-content-length"
+    ],
+    "maxAgeSeconds": 3600
+  }
+]

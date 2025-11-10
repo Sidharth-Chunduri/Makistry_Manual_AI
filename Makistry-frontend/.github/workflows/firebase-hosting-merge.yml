@@ -1,0 +1,47 @@
+name: Deploy to Firebase Hosting on merge
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Create .env.production
+        run: |
+          cat > .env.production <<'EOF'
+          VITE_API_URL=${{ vars.VITE_API_URL || '/api' }}
+          VITE_FIREBASE_API_KEY=${{ secrets.VITE_FIREBASE_API_KEY }}
+          VITE_FIREBASE_AUTH_DOMAIN=${{ secrets.VITE_FIREBASE_AUTH_DOMAIN }}
+          VITE_FIREBASE_PROJECT_ID=${{ secrets.VITE_FIREBASE_PROJECT_ID }}
+          VITE_FIREBASE_APP_ID=${{ secrets.VITE_FIREBASE_APP_ID }}
+          VITE_FIREBASE_MESSAGING_SENDER_ID=${{ secrets.VITE_FIREBASE_MESSAGING_SENDER_ID }}
+          VITE_FIREBASE_STORAGE_BUCKET=${{ secrets.VITE_FIREBASE_STORAGE_BUCKET }}
+          VITE_FIREBASE_MEASUREMENT_ID=${{ secrets.VITE_FIREBASE_MEASUREMENT_ID }}
+          EOF
+
+      - name: Check env file
+        run: |
+          test -f .env.production
+          grep -E '^(VITE_)' .env.production | sed 's/=.*/=<redacted>/'
+
+      - name: Install & build
+        run: npm ci && npm run build
+
+      - name: Verify Firebase key is in bundle
+        run: |
+          grep -R "AIza" dist/assets || (echo "API key not found in bundle" && exit 1)
+
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_INDIGO_NIGHT_463419_R0 }}
+          channelId: live
+          projectId: indigo-night-463419-r0

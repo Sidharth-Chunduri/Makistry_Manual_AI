@@ -1,0 +1,13 @@
+
+> vite_react_shadcn_ts@0.0.0 dev
+> vite --host
+
+
+  VITE v5.4.19  ready in 353 ms
+
+  ➜  Local:   http://localhost:8080/
+  ➜  Network: http://10.147.9.32:8080/
+6:43:47 PM [vite] page reload index.html
+6:43:47 PM [vite] hmr update /src/components/ArtifactsSection.tsx, /src/index.css
+6:43:47 PM [vite] hmr update /src/components/GoogleButton.tsx, /src/index.css
+6:43:47 PM [vite] page reload src/firebase.ts

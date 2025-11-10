@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://*.googleapis.com https://apis.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; connect-src 'self' http://localhost:8000 https: wss: ws:; font-src 'self' https:; media-src 'self' blob:; object-src 'none'; base-uri 'self'; frame-src 'self' https://*.firebaseapp.com https://*.google.com;" />
+    <title>Makistry</title>
+    <meta name="description" content="AI-powered physical product design platform." />
+    <meta name="author" content="Makistry" />
+
+    <meta property="og:title" content="Makistry" />
+    <meta property="og:description" content="AI-powered physical product design platform." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/just_M.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@makistry" />
+    <meta name="twitter:image" content="/just_M.png" />
+
+    <link rel="icon" type="image/png" sizes="48x48" href="/just_M.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/just_M.png" />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TS74YPGC7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TS74YPGC7');
+  </script>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

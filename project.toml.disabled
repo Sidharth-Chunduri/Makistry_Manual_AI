@@ -1,0 +1,9 @@
+[build]
+builder = "gcr.io/buildpacks/builder:google-22"
+
+[[build.buildpacks]]
+uri = "docker://gcr.io/paketo-buildpacks/apt:latest"
+
+[[build.env]]
+name  = "BP_APT_PACKAGES"
+value = "libgl1 libglu1-mesa libxext6 libsm6 libxrender1"

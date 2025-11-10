@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# IDE / editor
+.vscode/
+.idea/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Secrets & env files
+.env
+*.key
+*.pem
+*.yaml
+.env.local
+.env.production
+*.stl
+*.step
+*.stp
+*.gz
+indigo-night-463419-r0-96baf916cf02.json
+
